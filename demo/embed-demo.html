@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback Widget — Embed Demo</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      max-width: 640px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #333;
+    }
+    button {
+      padding: 8px 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      background: #fff;
+      cursor: pointer;
+      margin-right: 8px;
+    }
+    button:hover {
+      background: #f5f5f5;
+    }
+    .controls {
+      margin-top: 24px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <h1>Feedback Widget — Embed Demo</h1>
+  <p>This page demonstrates the standalone embed script. No React required on the host page.</p>
+
+  <div class="controls">
+    <button onclick="FeedbackWidget.open()">Open</button>
+    <button onclick="FeedbackWidget.close()">Close</button>
+    <button onclick="FeedbackWidget.destroy()">Destroy</button>
+    <button onclick="initWidget()">Re-init</button>
+  </div>
+
+  <script src="../dist/embed/feedback-widget.js"></script>
+  <script>
+    function initWidget() {
+      FeedbackWidget.init({
+        projectId:"proj_demo123",
+        apiKey:"fbk_demo_key",
+        apiBaseUrl:"url",
+        theme: 'light',
+        position: 'bottom-right',
+        primaryColor: '#5c5ce6',
+        title: 'Help us improve!',
+        onSubmit: function(data) {
+          console.log('Submitted:', data);
+        },
+        onError: function(err) {
+          console.error('Error:', err);
+        }
+      });
+    }
+
+    initWidget();
+  </script>
+</body>
+</html>
