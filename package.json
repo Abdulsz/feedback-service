@@ -35,5 +35,8 @@
     "typescript": "5.4.2",
     "vite": "^5.1.0",
     "vite-plugin-dts": "^3.7.0"
+  },
+  "dependencies": {
+    "@devfeedback/react-widget": "^0.1.1"
   }
 }
