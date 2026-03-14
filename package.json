@@ -1,6 +1,6 @@
 {
   "name": "@feedback/react-widget",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A distributable feedback widget for collecting user feedback",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
@@ -18,7 +18,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:embed": "vite build --config vite.embed.config.ts",
+    "build:embed": "vite build --config vite.embed.config.mts",
     "build:all": "npm run build && npm run build:embed",
     "typecheck": "tsc --noEmit"
   },
@@ -32,7 +32,7 @@
     "@vitejs/plugin-react": "^4.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^5.3.0",
+    "typescript": "5.4.2",
     "vite": "^5.1.0",
     "vite-plugin-dts": "^3.7.0"
   }

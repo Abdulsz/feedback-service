@@ -14,7 +14,7 @@ import type {
   WidgetTheme,
 } from './types';
 
-const DEFAULT_API_BASE_URL = 'http://localhost:8787';
+const DEFAULT_API_BASE_URL = 'https://github-pr-agent.zakariatimalma.workers.dev';
 
 type WidgetState = 'idle' | 'open' | 'submitting' | 'success';
 
@@ -209,7 +209,10 @@ export const FeedbackWidget = forwardRef<WidgetHandle, FeedbackWidgetProps>(
         };
 
         try {
-          const res = await fetch(`${apiBaseUrl}/api/feedback/submit`, {
+          const submitUrl = apiBaseUrl.endsWith('/api/feedback/submit')
+            ? apiBaseUrl
+            : `${apiBaseUrl.replace(/\/$/, '')}/api/feedback/submit`;
+          const res = await fetch(submitUrl, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
