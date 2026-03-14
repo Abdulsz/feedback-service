@@ -1,5 +1,5 @@
 {
-  "name": "@feedback/react-widget",
+  "name": "@devfeedback/react-widget",
   "version": "0.1.1",
   "description": "A distributable feedback widget for collecting user feedback",
   "main": "dist/index.cjs",
