@@ -10,6 +10,12 @@ A lightweight feedback widget for React apps, with an optional embeddable script
 - TypeScript type definitions included
 - Theming and position configuration
 
+## How it works
+
+The backend is powered by **Cloudflare Workers**, providing a globally distributed, low-latency API for receiving and storing feedback submissions.
+
+When technical feedback is submitted through the widget, a **GitHub PR Agent** automatically opens a pull request in your repository summarizing the feedback — so developers can review, discuss, and act on it directly in their existing workflow. All feedback is also surfaced in the **developer dashboard**, giving your team a central place to track and triage user-reported issues and suggestions.
+
 ## Installation
 
 ```bash
