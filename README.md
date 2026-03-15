@@ -2,7 +2,7 @@
 
 A lightweight feedback widget for React apps, with an optional embeddable script build for non-React pages.
 
-- Create an account and get API keys at [https://github-pr-agent.zakariatimalma.workers.dev/auth](https://github-pr-agent.zakariatimalma.workers.dev/auth).
+- Create an account and get API keys at [https://github-pr-agent.zakariatimalma.workers.dev/](https://github-pr-agent.zakariatimalma.workers.dev/) and click "Dashboard"
 
 ## Features
 
