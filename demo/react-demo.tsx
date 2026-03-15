@@ -1,6 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { FeedbackWidget } from '../src/FeedbackWidget';
+//import { FeedbackWidget } from '../src/FeedbackWidget';
+import { FeedbackWidget } from '@devfeedback/react-widget';
 
 function App() {
   return (
@@ -18,9 +19,8 @@ function App() {
       </div>
 
       <FeedbackWidget
-        projectId="proj_demo123"
-        apiKey="fbk_demo_key"
-        apiBaseUrl="url"
+        projectId="projectIdKey"
+        apiKey="apiKey"
         config={{
           theme: 'light',
           position: 'bottom-right',
